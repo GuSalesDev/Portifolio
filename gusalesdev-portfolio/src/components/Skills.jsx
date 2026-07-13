@@ -4,8 +4,8 @@ import SkillBar from "./SkillBar";
 export default function Skills() {
   return (
     <section className="gsd-section" id="skills">
-      <div className="gsd-eyebrow">$ ps --skills</div>
-      <h2 className="gsd-h2">Stack &amp; Progresso</h2>
+      <div className="gsd-eyebrow"> skills</div>
+      <h2 className="gsd-h2">Stacks</h2>
 
       <div className="gsd-skills-list">
         {SKILLS.map((skill) => (

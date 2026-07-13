@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className={`gsd-nav ${solid ? "solid" : ""}`}>
-      <span className="gsd-logo">GuSalesDev</span>
+      <span className="gsd-logo">Gustavo Sales</span>
       <div className="gsd-nav-links">
         <a href="#sobre">SOBRE</a>
         <a href="#skills">SKILLS</a>

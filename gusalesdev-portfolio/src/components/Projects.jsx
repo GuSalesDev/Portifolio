@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 export default function Projects() {
   return (
     <section className="gsd-section" id="projetos">
-      <div className="gsd-eyebrow">$ ls ./projetos</div>
+      <div className="gsd-eyebrow">Meus Projetos</div>
       <h2 className="gsd-h2">Projetos</h2>
 
       <div className="gsd-projects-grid">

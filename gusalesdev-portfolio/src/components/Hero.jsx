@@ -1,10 +1,11 @@
 import { useTypedLines } from "../hooks/useTypedLines";
 import Skyline from "./Skyline";
+import profilePhoto from "../assets/placeholder.jpg";
 
 const BOOT_LINES = [
   "> iniciando sessão…",
-  "> usuário: gustavo",
-  "> cargo: desenvolvedor backend java",
+  "> usuário: Gustavo",
+  "> cargo: desenvolvedor backend",
   "> status: pronto para produção",
 ];
 
@@ -14,42 +15,59 @@ export default function Hero() {
   return (
     <header className="gsd-hero">
       <span className="gsd-kanji left" aria-hidden="true">
-        バックエンド開発者
+        F O C O
       </span>
       <span className="gsd-kanji right" aria-hidden="true">
-        接続 確立
+        D I S C I P L I N A
       </span>
 
       <Skyline />
 
-      <div className="gsd-boot" aria-hidden={done}>
-        {rendered.map((line, i) => (
-          <div key={i}>
-            {line}
-            {i === rendered.length - 1 && !done && (
-              <span className="gsd-cursor" />
-            )}
+      <div className="gsd-hero-grid">
+        <div className="gsd-hero-content">
+          <div className="gsd-boot" aria-hidden={done}>
+            {rendered.map((line, i) => (
+              <div key={i}>
+                {line}
+                {i === rendered.length - 1 && !done && (
+                  <span className="gsd-cursor" />
+                )}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <h1 className="gsd-title">
-        <span className="glow">Gustavo</span> Sales
-      </h1>
+          <h1 className="gsd-title">
+            <span className="glow">Gustavo</span> Sales
+          </h1>
 
-      <p className="gsd-subtitle">
-        Desenvolvedor backend Java em formação — construindo sistemas com
-        Spring Boot, bancos relacionais e uma boa dose de disciplina de
-        engenharia.
-      </p>
+          <p className="gsd-subtitle">
+            aqui vai alguma coisa
+          </p>
 
-      <div className="gsd-hero-actions">
-        <a className="gsd-btn primary" href="#projetos">
-          VER PROJETOS
-        </a>
-        <a className="gsd-btn ghost" href="https://github.com/GuSalesDev" target="_blank" rel="noreferrer">
-          GITHUB ↗
-        </a>
+          <div className="gsd-hero-actions">
+            <a className="gsd-btn primary" href="#projetos">
+              VER PROJETOS
+            </a>
+            <a
+              className="gsd-btn ghost"
+              href="https://github.com/GuSalesDev"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GITHUB ↗
+            </a>
+          </div>
+        </div>
+
+        <div className="gsd-hero-photo">
+          <div className="gsd-photo-frame">
+            <span className="corner tl" />
+            <span className="corner tr" />
+            <span className="corner bl" />
+            <span className="corner br" />
+            <img src={profilePhoto} alt="Foto de Gustavo Sales" />
+          </div>
+        </div>
       </div>
     </header>
   );

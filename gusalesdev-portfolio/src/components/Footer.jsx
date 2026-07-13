@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <section className="gsd-footer" id="contato">
-      <div className="gsd-eyebrow">$ contato --conectar</div>
+      <div className="gsd-eyebrow">Entre em contato</div>
       <h2 className="gsd-h2">Bora conectar</h2>
       <p>Aberto a oportunidades de estágio e vaga júnior em backend Java.</p>
 
