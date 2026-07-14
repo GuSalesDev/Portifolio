@@ -428,45 +428,82 @@ a {
   color: var(--text-hi);
 }
 
-/* skills */
-.gsd-skills-list {
+/* ---------- stack marquee ---------- */
+.gsd-stack-rows {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  max-width: 640px;
+  gap: 36px;
 }
 
-.gsd-skill-row {
-  display: grid;
-  grid-template-columns: 180px 1fr 48px;
+.gsd-marquee-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--green-neon);
+  margin-bottom: 12px;
+}
+
+.gsd-marquee {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.gsd-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: gsd-scroll 24s linear infinite;
+}
+
+.gsd-marquee-track.reverse {
+  animation-direction: reverse;
+}
+
+.gsd-marquee:hover .gsd-marquee-track {
+  animation-play-state: paused;
+}
+
+.gsd-marquee-group {
+  display: flex;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+@keyframes gsd-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.gsd-tech-chip {
+  display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 0.82rem;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid var(--green-line);
+  border-radius: 6px;
+  background: var(--bg-panel);
+  white-space: nowrap;
 }
 
-.gsd-skill-name {
+.gsd-tech-icon {
+  font-size: 1.4rem;
+  color: var(--green-neon);
+  flex-shrink: 0;
+}
+
+.gsd-tech-chip span {
+  font-size: 0.8rem;
   color: var(--text-hi);
 }
 
-.gsd-bar-track {
-  height: 6px;
-  background: var(--bg-panel-2);
-  border: 1px solid var(--green-line);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.gsd-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--green-dim), var(--green-neon));
-  box-shadow: 0 0 10px rgba(35, 255, 176, 0.6);
-  width: 0%;
-  transition: width 1.2s ease;
-}
-
-.gsd-skill-pct {
-  text-align: right;
-  color: var(--green-neon-soft);
+@media (prefers-reduced-motion: reduce) {
+  .gsd-marquee-track {
+    animation: none !important;
+  }
+  .gsd-marquee {
+    overflow-x: auto;
+  }
 }
 
 /* projects */

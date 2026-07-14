@@ -1,6 +1,6 @@
 import { useTypedLines } from "../hooks/useTypedLines";
 import Skyline from "./Skyline";
-import profilePhoto from "../assets/placeholder.jpg";
+import profilePhoto from "../assets/profile-photo.png";
 
 const BOOT_LINES = [
   "> iniciando sessão…",
