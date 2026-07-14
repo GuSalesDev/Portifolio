@@ -42,15 +42,8 @@ export default function Skyline() {
           width="4"
           height="10"
           fill="#23ffb0"
-          opacity={0.5 + (i % 3) * 0.15}
-        >
-          <animate
-            attributeName="opacity"
-            values="0.9;0.3;0.9"
-            dur={`${2 + (i % 3)}s`}
-            repeatCount="indefinite"
-          />
-        </rect>
+          opacity={0.7}
+        />
       ))}
 
       <rect x="0" y="0" width="1200" height="300" fill="url(#fade)" />
