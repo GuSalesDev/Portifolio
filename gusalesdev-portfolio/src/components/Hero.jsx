@@ -40,15 +40,14 @@ export default function Hero() {
             <span className="glow">Gustavo</span> Sales
           </h1>
 
-          <p className="gsd-subtitle">
-            aqui vai alguma coisa
-          </p>
+          <p className="gsd-subtitle">aqui vai alguma coisa</p>
 
           <div className="gsd-hero-actions">
             <a className="gsd-btn primary" href="#projetos">
               VER PROJETOS
             </a>
             <a
+            
               className="gsd-btn ghost"
               href="https://github.com/GuSalesDev"
               target="_blank"
@@ -61,10 +60,6 @@ export default function Hero() {
 
         <div className="gsd-hero-photo">
           <div className="gsd-photo-frame">
-            <span className="corner tl" />
-            <span className="corner tr" />
-            <span className="corner bl" />
-            <span className="corner br" />
             <img src={profilePhoto} alt="Foto de Gustavo Sales" />
           </div>
         </div>
