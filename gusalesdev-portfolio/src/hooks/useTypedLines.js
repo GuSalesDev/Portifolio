@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
 
-/**
- * Simula um terminal digitando linhas de texto, uma de cada vez.
- * Retorna as linhas já renderizadas até o momento e um flag `done`
- * quando toda a sequência termina.
- */
 export function useTypedLines(lines, speed = 28, pause = 450) {
   const [rendered, setRendered] = useState([]);
   const [done, setDone] = useState(false);
@@ -42,7 +37,7 @@ export function useTypedLines(lines, speed = 28, pause = 450) {
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   }, []);
 
   return { rendered, done };
