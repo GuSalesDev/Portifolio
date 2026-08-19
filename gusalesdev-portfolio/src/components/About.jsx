@@ -7,10 +7,10 @@ export default function About() {
       <div className="gsd-about-grid">
         <div className="gsd-about-text">
           <p>
-            aqui vai alguma coisa
+            Sou estudante de desenvolvimento de software e desenvolvedor Full Stack, com foco na criação de aplicações completas e soluções funcionais. Trabalho principalmente com Java, Spring Boot, React, JavaScript, Python, SQL e PostgreSQL, desenvolvendo APIs REST, interfaces web, integrações entre frontend e backend, autenticação e bancos de dados.
           </p>
           <p>
-            aqui vai alguma coisa
+           Tenho experiência em levar projetos do desenvolvimento até a produção, incluindo a integração entre frontend e backend e o deploy das aplicações. Atualmente, busco aprimorar meus conhecimentos em arquitetura de software, cloud e desenvolvimento de aplicações escaláveis, com o objetivo de evoluir como desenvolvedor e futuramente atuar em projetos internacionais.
           </p>
         </div>
 

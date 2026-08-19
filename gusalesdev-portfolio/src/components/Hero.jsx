@@ -4,8 +4,8 @@ import profilePhoto from "../assets/profile-photo.png";
 
 const BOOT_LINES = [
   "> iniciando sessão…",
-  "> usuário: Gustavo",
-  "> cargo: desenvolvedor backend",
+  "> usuário: Gustavo Sales",
+  "> cargo: desenvolvedor Full-Stack",
   "> status: pronto para produção",
 ];
 
