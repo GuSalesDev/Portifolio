@@ -14,6 +14,7 @@ export const PROJECTS = [
     desc:
       "Aplicação full-stack publicada na nuvem, com autenticação via JWT, interceptors no Axios e API REST protegida por Spring Security.",
     stack: ["Java 21", "Spring Boot 3", "MySQL", "React 19", "Railway"],
+    githubUrl: "https://github.com/GuSalesDev/todoapi",
   },
   {
     id: "choc",

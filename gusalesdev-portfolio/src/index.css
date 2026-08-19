@@ -32,6 +32,7 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* ---------- scanlines + vignette ---------- */
@@ -447,25 +448,56 @@ a {
 }
 
 /* projects */
+
 .gsd-projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 22px;
 }
 
+.gsd-card-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
 .gsd-card {
   background: var(--bg-panel);
   border: 1px solid var(--green-line);
-  border-radius: 6px;
-  padding: 22px;
+  border-radius: 0 10px 10px 10px;
+  padding: 26px 22px 22px;
   position: relative;
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.gsd-card:hover {
+.gsd-card::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 40%;
+  min-width: 120px;
+  height: 22px;
+  background: var(--bg-panel);
+  border: 1px solid var(--green-line);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  transition: border-color 0.25s ease;
+}
+
+.gsd-card-link:hover .gsd-card {
   transform: translateY(-4px);
   border-color: var(--green-neon);
   box-shadow: 0 12px 40px rgba(35, 255, 176, 0.12);
+}
+
+.gsd-card-link:hover .gsd-card::before {
+  border-color: var(--green-neon);
 }
 
 .gsd-card-tag {
@@ -486,6 +518,7 @@ a {
   font-size: 0.82rem;
   line-height: 1.6;
   margin-bottom: 16px;
+  flex-grow: 1;
 }
 
 .gsd-stack {
@@ -528,6 +561,90 @@ a {
   margin-top: 40px;
   font-size: 0.7rem;
   color: var(--green-dim);
+}
+
+/* ---------- página de projeto ---------- */
+.gsd-project-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 8vw 90px;
+}
+
+.gsd-back-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--green-neon-soft);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+.gsd-back-link:hover {
+  color: var(--green-neon);
+}
+
+.gsd-project-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--text-hi);
+  margin: 10px 0 40px;
+}
+
+.gsd-project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.gsd-project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.gsd-project-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.gsd-project-github {
+  margin-top: 28px;
+  align-self: flex-start;
+}
+
+.gsd-project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gsd-gallery-frame {
+  border: 1px solid var(--green-line);
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.gsd-gallery-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gsd-gallery-placeholder {
+  border: 1px dashed var(--green-line);
+  border-radius: 14px;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--green-dim);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  .gsd-project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {

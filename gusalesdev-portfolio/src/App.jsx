@@ -1,9 +1,6 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
   return (
@@ -11,12 +8,10 @@ function App() {
       <div className="gsd-scanlines" aria-hidden="true" />
       <div className="gsd-vignette" aria-hidden="true" />
 
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projetos/:id" element={<ProjectPage />} />
+      </Routes>
     </>
   );
 }
