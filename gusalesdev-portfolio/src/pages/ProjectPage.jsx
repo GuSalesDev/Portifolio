@@ -1,14 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { PROJECTS } from "../data/projects";
 
 export default function ProjectPage() {
   const { id } = useParams();
   const project = PROJECTS.find((p) => p.id === id);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  useEffect(() => {
+    if (!selectedImage) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selectedImage]);
 
   if (!project) {
     return (
@@ -59,9 +80,21 @@ export default function ProjectPage() {
         <div className="gsd-project-gallery">
           {project.images && project.images.length > 0 ? (
             project.images.map((img, i) => (
-              <div className="gsd-gallery-frame" key={i}>
+              <button
+                className="gsd-gallery-frame"
+                type="button"
+                key={i}
+                onClick={() =>
+                  setSelectedImage({
+                    src: img,
+                    alt: `${project.name} — imagem ${i + 1}`,
+                  })
+                }
+                aria-label={`Ampliar imagem ${i + 1} de ${project.name}`}
+              >
                 <img src={img} alt={`${project.name} — imagem ${i + 1}`} />
-              </div>
+                <span className="gsd-gallery-zoom-hint">ampliar ↗</span>
+              </button>
             ))
           ) : (
             <div className="gsd-gallery-placeholder">
@@ -70,6 +103,31 @@ export default function ProjectPage() {
           )}
         </div>
       </div>
+
+      {selectedImage && (
+        <div
+          className="gsd-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Imagem ampliada"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="gsd-lightbox-close"
+            type="button"
+            onClick={() => setSelectedImage(null)}
+            aria-label="Fechar imagem ampliada"
+          >
+            ×
+          </button>
+          <img
+            className="gsd-lightbox-image"
+            src={selectedImage.src}
+            alt={selectedImage.alt}
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }
