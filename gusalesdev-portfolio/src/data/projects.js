@@ -4,15 +4,19 @@ import todoImg3 from "../assets/projects/todoapi3.png";
 import catalogolivro1 from "../assets/projects/catalogolivro1.png";
 import catalogolivro2 from "../assets/projects/catalogolivro2.png";
 import catalogolivro3 from "../assets/projects/catalogolivro3.png";
+import codereviewimg1 from "../assets/projects/codereview1.png";
+import codereviewimg2 from "../assets/projects/codereviewapi2.png";
+import codereviewimg3 from "../assets/projects/codereviewapi3.png";
 
 export const PROJECTS = [
   {
-    id: "vet",
+    id: "codereview",
     tag: "PROJ_03 — EM DESENVOLVIMENTO",
-    name: "Sistema de Clínica Veterinária",
+    name: "Code Review Assistant",
     desc:
-      "Plataforma full-stack para gestão de consultas: autenticação JWT, Spring Security, regras de negócio no domínio, migrações com Flyway. Frontend em React separando áreas de cliente, veterinário e admin.",
-    stack: ["Java 21", "Spring Boot", "PostgreSQL", "Flyway", "React", "Vite"],
+      "API REST para revisão automatizada de código Java com inteligência artificial, desenvolvida com Java 21, Spring Boot 4, LangChain4j e integração com a API da OpenAI. O sistema recebe um ou mais arquivos de código Java e retorna uma análise estruturada, apontando bugs, riscos de segurança, problemas de performance e violações de boas práticas, cada sugestão classificada por categoria e severidade, com descrição do problema e correção proposta. O backend segue uma arquitetura em camadas, com validação de dados via Jakarta Bean Validation, tratamento global de exceções e um serviço dedicado à construção do prompt e ao parsing estruturado da resposta do modelo de IA em objetos tipados. A comunicação com o provedor de LLM possui tratamento de falhas específico, retornando erros padronizados em caso de indisponibilidade ou resposta fora do formato esperado.",
+    stack: ["Java 21", "Spring Boot 4", "Spring Web", "Spring Validation", "LangChain4j", "Maven", "JUnit 5", "MockMvc", "Jackson"],
+    images: [codereviewimg1, codereviewimg2, codereviewimg3],
   },
   {
     id: "todo",
