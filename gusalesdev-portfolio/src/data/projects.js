@@ -14,13 +14,16 @@ export const PROJECTS = [
     tag: "PROJ_03 — EM DESENVOLVIMENTO",
     name: "Code Review Assistant",
     desc:
+      "Code Review Assistant — API REST em Java que usa inteligência artificial para revisar código automaticamente. Recebe arquivos Java e retorna sugestões de bugs, falhas de segurança e boas práticas, geradas por LLM (OpenAI) via LangChain4j. Construído com Spring Boot 4 e Java 21.",
+    longDescription:
       "API REST para revisão automatizada de código Java com inteligência artificial, desenvolvida com Java 21, Spring Boot 4, LangChain4j e integração com a API da OpenAI. O sistema recebe um ou mais arquivos de código Java e retorna uma análise estruturada, apontando bugs, riscos de segurança, problemas de performance e violações de boas práticas, cada sugestão classificada por categoria e severidade, com descrição do problema e correção proposta. O backend segue uma arquitetura em camadas, com validação de dados via Jakarta Bean Validation, tratamento global de exceções e um serviço dedicado à construção do prompt e ao parsing estruturado da resposta do modelo de IA em objetos tipados. A comunicação com o provedor de LLM possui tratamento de falhas específico, retornando erros padronizados em caso de indisponibilidade ou resposta fora do formato esperado.",
     stack: ["Java 21", "Spring Boot 4", "Spring Web", "Spring Validation", "LangChain4j", "Maven", "JUnit 5", "MockMvc", "Jackson"],
+    githubUrl: "https://github.com/GuSalesDev/codereviewapi.git",
     images: [codereviewimg1, codereviewimg2, codereviewimg3],
   },
   {
     id: "todo",
-    tag: "PROJ_02 — EM PRODUÇÃO",
+    tag: "PROJ_02 — EM DESENVOLVIMENTO",
     name: "To-Do List App",
     desc:
       "Aplicação full-stack publicada na nuvem, com autenticação via JWT, interceptors no Axios e API REST protegida por Spring Security.",
