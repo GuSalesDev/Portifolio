@@ -13,7 +13,10 @@ export const PROJECTS = [
     name: "To-Do List App",
     desc:
       "Aplicação full-stack publicada na nuvem, com autenticação via JWT, interceptors no Axios e API REST protegida por Spring Security.",
+    longDescription:
+      "Aplicação Full Stack para gerenciamento de tarefas, desenvolvida com Java 21, Spring Boot, Spring Security, JWT, Spring Data JPA, Hibernate e MySQL no backend, e React 19, Vite, Axios e CSS no frontend. O sistema permite cadastro e autenticação de usuários, criação, gerenciamento e exclusão de tarefas, garantindo que cada usuário tenha acesso apenas aos seus próprios dados. O backend segue uma arquitetura em camadas, com validação de dados, tratamento global de exceções, autenticação stateless e senhas protegidas com BCrypt. O frontend é responsivo e integrado à API REST por meio de autenticação JWT. O projeto foi totalmente integrado e publicado em produção no Railway, com deploy automatizado via GitHub e banco de dados hospedado na própria plataforma.",
     stack: ["Java 21", "Spring Boot 3", "MySQL", "React 19", "Railway"],
+    githubUrl: "https://github.com/GuSalesDev/todoapi",
   },
   {
     id: "choc",
