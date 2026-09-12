@@ -9,7 +9,7 @@ export default function Footer() {
         <a className="gsd-btn primary" href="https://github.com/GuSalesDev" target="_blank" rel="noreferrer">
           GITHUB
         </a>
-        <a className="gsd-btn ghost" href="mailto:seuemail@exemplo.com">
+        <a className="gsd-btn ghost" href="mailto:gustavo6624@gmail.com">
           EMAIL
         </a>
         <a className="gsd-btn ghost" href="https://linkedin.com" target="_blank" rel="noreferrer">
