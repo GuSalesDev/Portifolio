@@ -2,6 +2,8 @@
 
 Portfólio profissional de Gustavo Sales, desenvolvido para apresentar sua experiência, stack e projetos de desenvolvimento full-stack. A aplicação possui uma identidade visual inspirada em interfaces futuristas, é responsiva e conta com páginas detalhadas para cada projeto.
 
+VIZUALIZE: https://portifolio-gray-one-92.vercel.app/
+
 ## Funcionalidades
 
 - Landing page com seções de apresentação, sobre, habilidades, projetos e contato.
